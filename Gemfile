@@ -26,7 +26,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'react-rails',  '1.10.0'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'react-rails-img'
-gem 'devise'
 gem 'rails_12factor', group: :production
 
 
