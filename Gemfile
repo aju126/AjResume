@@ -27,8 +27,11 @@ gem 'react-rails',  '1.10.0'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'react-rails-img'
 gem 'rails_12factor', group: :production
+gem "paperclip", "~> 5.0.0"
 
+gem 'mysql2'
 
+gem 'tinymce-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

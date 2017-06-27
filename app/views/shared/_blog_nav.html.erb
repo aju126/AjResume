@@ -1,0 +1,27 @@
+<div class="back-nav-container">
+  <div class="back-button">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <%= link_to("Aj's profile", :root) %>
+  </div>
+    <nav class="navbar navbar-default navbar-inverse" role="navigation">
+      <div class="container-fluid" id="navfluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navigationbar">
+          <ul class="nav navbar-nav">
+            <% @blog_titles.each do |blog_title| %>
+                <% blog_link = "/blogs/#{blog_title.name.downcase}" %>
+                <li><a href= <%= blog_link %>><%= blog_title.name %></a></li>
+            <% end %>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+</div>

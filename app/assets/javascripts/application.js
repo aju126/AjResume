@@ -18,4 +18,7 @@
 //= require react_ujs
 //= require components
 //= require react_rails_img
+//= require blog_nav
+//= require tinymce
 //= require_tree .
+

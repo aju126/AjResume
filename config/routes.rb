@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # resources :blog_sources
+  # resources :blog_sub_titles
+  # resources :blog_titles
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -6,6 +9,15 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   root to: 'profiles#index'
+  get 'profiles/download', to: 'profiles#resume'
+  get '/blogs/recent', to: 'blog_page#recent'
+  get '/blogs/technology', to: 'blog_page#technology'
+  get '/blogs/programming', to: 'blog_page#programming'
+  get '/blogs/music', to: 'blog_page#music'
+  get '/blogs/travelling', to: 'blog_page#travelling'
+  get '/blogs/bikes', to: 'blog_page#bikes'
+  resources :blogs, only: [:new, :create, :show]
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
