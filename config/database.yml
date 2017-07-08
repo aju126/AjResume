@@ -22,5 +22,7 @@ test:
   database: db/aj_test_blog
 
 production:
-  <<: *default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
   database: db/aj_production_blog

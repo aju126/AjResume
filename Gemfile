@@ -30,11 +30,11 @@ gem 'rails_12factor', group: :production
 gem "paperclip", "~> 5.0.0"
 gem "font-awesome-rails"
 
-gem 'mysql2'
 
 gem 'tinymce-rails'
 
 gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -44,9 +44,14 @@ gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :production do
+  gem 'pg'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'mysql2'
 end
 
 group :development do
