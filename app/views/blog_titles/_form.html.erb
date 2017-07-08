@@ -1,0 +1,17 @@
+<%= form_for(@blog_title) do |f| %>
+  <% if @blog_title.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@blog_title.errors.count, "error") %> prohibited this blog_title from being saved:</h2>
+
+      <ul>
+      <% @blog_title.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

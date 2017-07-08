@@ -1,0 +1,1 @@
+json.partial! "blog_titles/blog_title", blog_title: @blog_title

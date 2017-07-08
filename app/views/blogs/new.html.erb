@@ -1,0 +1,23 @@
+<%= form_for(@blog) do |f|%>
+    <h1>Welcome, Time to write a blog now</h1>
+    <ul>
+      <li>
+        <%=f.label 'Select Title : '%>
+        <%= select_tag 'blog_titles_id', options_for_select(@blog_titles.map{|title| [title.name, title.id] }) %>
+      </li>
+      <li>
+        <%= f.label 'Blog Title :' %>
+        <%= text_field_tag 'title','', class: 'title_class' %>
+      </li>
+      <li>
+        <%= f.label 'Blog Description :' %>
+        <%= text_area_tag :description, '', :class => "tinymce", :rows => 20, :cols => 120 %>
+        <%= tinymce %>
+      </li>
+      <li>
+        <%= submit_tag 'Post' %>
+        <%= link_to 'Cancel'%>
+      </li>
+    </ul>
+<%end%>
+

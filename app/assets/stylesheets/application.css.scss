@@ -1,0 +1,228 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+$main-color: #2b90d9;
+
+body {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+div div div {
+
+  h1 {
+    font-size: 5em;
+    color: grey;
+  }
+  .text-primary {
+    color: main-color;
+  }
+  a.text-primary:hover {
+    color: #2074b1;
+  }
+}
+
+.display-linebreak {
+  white-space: pre-line;
+}
+
+#about_heading {
+  color: main-color;
+  margin-top: 1em;
+  margin-bottom: 0.25em;
+}
+
+#quote-text{
+  color: black;
+  margin-left: 2em;
+  font-size: 1.5em;
+  width:50%;
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+
+hr {
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+#img-tech {
+  width: 100%;
+  height: auto;
+}
+
+
+$gray: #dddddd;
+
+.timeline {
+  position: relative;
+  overflow: auto;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    background: $gray;
+    left: 0;
+  }
+
+  .main {
+    background: $main-color;
+    max-width: 16em;
+    margin: 0 auto 0.25em;
+    padding: 0.1em;
+    text-align: center;
+    position: relative;
+    color: white;
+    font-size: 2em;
+    clear: both;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0 0 0 1em;
+    z-index: 1;
+  }
+
+  li {
+    background: $gray;
+    padding: 1em;
+    margin-bottom: 1em;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 1em solid $gray;
+      border-left: 1em solid transparent;
+      position: absolute;
+      left: -1em;
+      top: 0;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+    padding-top: 0.5em;
+  }
+
+  h4 {
+    color: #255625;
+  }
+
+  time {
+    font-style: italic;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .container {
+    margin: 0 auto;
+  }
+
+  .timeline {
+    &:before {
+      left: 50%;
+    }
+
+    ul {
+      padding-left: 0;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    li {
+      width: 48%;
+    }
+
+    li:nth-child(even) {
+      float: right;
+      margin-top: 8em;
+      margin-bottom: 4em;
+    }
+
+    li:nth-child(odd) {
+      float: left;
+      margin-top: 3em;
+      margin-bottom: 5em;
+
+      &:before {
+        border-top: 1em solid $gray;
+        border-right: 1em solid transparent;
+        right: -1em;
+        left: auto;
+      }
+    }
+
+    li:nth-of-type(2n+1) {
+      clear: both;
+    }
+  }
+}
+.reco-main {
+  background-color: $gray;
+  margin: 1em;
+  border: 4px solid $main-color;
+  border-radius: 2em;
+  padding: 0.25em;
+}
+.reco-description {
+  background-color: #ffffff;
+  margin: 0.25em 1.25em 1em 1.25em;
+  padding: 1em;
+  border-radius: 1.5em;
+}
+
+.first-box{width: 12em;
+  height: 12em;
+  color: #ffffff;
+  &:hover {
+    color: #ffffff;
+  }
+  &:focus {
+    color: #ffffff;
+  }
+}
+.background-color-1 {
+  background-color: #2c4388;
+}
+
+.background-linkedin {
+  background-color: #0060a8
+}
+
+.background-color-2 {
+  background-color: orange;
+}
+
+.background-color-3 {
+  background-color: firebrick;
+}
+
+.white {
+  color: #ffffff;
+}

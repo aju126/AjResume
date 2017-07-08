@@ -1,0 +1,1 @@
+json.array! @blog_sub_titles, partial: 'blog_sub_titles/blog_sub_title', as: :blog_sub_title

@@ -1,0 +1,11 @@
+<div class="blog_list_main">
+  <% blogs.each do |blog| %>
+      <%=link_to blog.title, blog_path(blog.id), class: 'h1' %>
+      <div class="myclass">
+        <p><%= ActionView::Base.full_sanitizer.sanitize(blog.description) %></p>
+      </div>
+      <%=link_to 'Read More', blog_path(blog.id) %>
+      <span class="posted_tag"><%= "Posted on #{blog.created_at}" %></span>
+      <hr />
+  <% end %>
+</div>

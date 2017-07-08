@@ -1,0 +1,33 @@
+$main-color: #2b90d9;
+.blog_title {
+  color: $main-color;
+}
+.posted_tag {
+  border-radius: 20px;
+  background-color: lightgreen;
+  padding: 0.5em;
+  font-size: x-small;
+}
+
+.blog_list_main {
+  width: 100%;
+  height: 100%;
+  margin-top: 10em;
+  h1 {
+    font-size: 32px;
+  }
+  a {
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.myclass {
+  line-height: 1.5em;
+  height: 3em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+}
