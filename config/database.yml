@@ -26,4 +26,4 @@ production:
   pool: 5
   timeout: 5000
   host: localhost
-  database: db/aj_production_blog
+  database: aj_production_blog
