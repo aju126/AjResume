@@ -5,14 +5,14 @@ var TimelineContent = React.createClass({
 			<div className="container">    
         <div className="timeline">
           <div className='main'>
-          <h4>{this.props.comp.name}</h4>
+          <h3>{this.props.comp.name}</h3>
           <h5>{this.props.comp.designation}</h5>
           <h5>{this.props.comp.duration}</h5>
           </div>
           <ul>
           {this.props.comp.projects.map((project, i) => 
             <li>
-              <h5>{project.title}</h5>
+              <h4>{project.title}</h4>
               <p>{project.description}</p>
               <p>{project.skills}</p>
               <time>{project.platform}</time>

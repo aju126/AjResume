@@ -1,7 +1,6 @@
 class BlogPageController < ApplicationController
   before_action :set_blog_titles
 
-
   def recent
     @blogs = Blog.all
   end

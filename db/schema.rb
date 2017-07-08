@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170622064227) do
+ActiveRecord::Schema.define(version: 20170630111827) do
 
   create_table "blog_sources", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -51,5 +51,25 @@ ActiveRecord::Schema.define(version: 20170622064227) do
   add_index "blogs", ["blog_sources_id"], name: "index_blogs_on_blog_sources_id", using: :btree
   add_index "blogs", ["blog_sub_titles_id"], name: "index_blogs_on_blog_sub_titles_id", using: :btree
   add_index "blogs", ["blog_titles_id"], name: "index_blogs_on_blog_titles_id", using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  limit: 255, default: "",    null: false
+    t.string   "encrypted_password",     limit: 255, default: "",    null: false
+    t.string   "reset_password_token",   limit: 255
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          limit: 4,   default: 0,     null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
+    t.boolean  "email_confirmed",                    default: false
+    t.string   "confirm_token",          limit: 255
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

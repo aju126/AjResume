@@ -28,6 +28,8 @@ module Aj
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.precompile << '*.js'
+    config.assets.enabled = true
+    config.assets.paths << "#{Rails.root}/app/assets/files"
     config.tinymce.install = :compile
   end
 end

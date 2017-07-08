@@ -1,8 +1,7 @@
 var Header = React.createClass (
 {
     showBlog() {
-        alert({BASE_URL});
-        window.location.href = {BASE_URL} + "/blogs/recent"
+        window.location.href = location.protocol + '//' + location.host + "/blogs/recent"
     },
 	render() {
 	return (

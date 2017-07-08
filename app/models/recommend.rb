@@ -57,6 +57,6 @@ class Recommend
   end
 
   def hash_value
-    {name: [reco_1, reco_2, reco_3, reco_4, reco_5]}
+    {name: [reco_1, reco_2, reco_3, reco_4, reco_5, reco_6, reco_7]}
   end
 end
