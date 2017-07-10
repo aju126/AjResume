@@ -7,13 +7,15 @@ var Recommend = React.createClass({
                     <div className='reco-description'>
                         <p>{ this.props.reco.desc }</p>
                     </div>
+                    <div className='row'>
                         <div className="col-sm-4 col-md-4">
                             <Img src={ this.props.reco.image } style={Img_style} alt="logo" className="img-circle" id="img-circle"/>
                         </div>
-                        <div className="col-sm-8 col-md-8">
+                        <div className="col-sm-6 col-md-6">
                             <p>{ this.props.reco.name }</p>
                             <p>{ this.props.reco.desi }</p>
                         </div>
+                    </div>
                 </div>
             </div>
         )

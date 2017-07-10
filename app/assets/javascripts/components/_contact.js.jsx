@@ -23,20 +23,19 @@ var Contact = React.createClass({
         function components(contacts) {
 
             if(contacts.download) {
-                return <div className={`col-md-4 text-center ${ contacts.color }`}>
-
+                return <div className={`col-md-4 col-sm-4 text-center ${ contacts.color }`}>
                     <a className="first-box"
                         href={`${contacts.url}`}
                         download={`${contacts.download}`} >
-                        <h1><span className={`${ contacts.classname } ${contacts.fcolor}`}></span></h1>
+                        <h3><span className={`${ contacts.classname } ${contacts.fcolor}`}></span></h3>
                         <h5>{contacts.name}</h5>
                     </a>
                 </div>
             }else {
-                return <div className={`col-md-4 text-center ${ contacts.color }`}>
+                return <div className={`col-md-4 col-sm-4 text-center ${ contacts.color }`}>
                     <a className="first-box"
                         href={`${contacts.url}`} >
-                        <h1><span className={`${ contacts.classname } ${contacts.fcolor}`}></span></h1>
+                        <h3><span className={`${ contacts.classname } ${contacts.fcolor}`}></span></h3>
                         <h5>{contacts.name}</h5>
                     </a>
                 </div>
