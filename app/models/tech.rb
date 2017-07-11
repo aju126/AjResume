@@ -12,7 +12,7 @@ class Tech
 	end
 
 	def quote
-		{quote: "\"Everyday life is like programming, I guess. If you love something you can put beauty into it\".", cort: "Donald Knuth"}
+		{quote: "“Everyday life is like programming, I guess. If you love something you can put beauty into it.”", cort: "Donald Knuth"}
 	end
 
 	def hash_value 

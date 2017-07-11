@@ -11,7 +11,8 @@ var Header = React.createClass (
          a <span className="text-primary"> {this.props.position}</span> living in {this.props.location}</h1>
         <button onClick={this.showBlog} style={{position: 'absolute',
             right: '2em',
-            top: '2em'}}>My Blog</button>
+            top: '2em',
+            display: 'none'}}>My Blog</button>
 
       </div>
 	)
