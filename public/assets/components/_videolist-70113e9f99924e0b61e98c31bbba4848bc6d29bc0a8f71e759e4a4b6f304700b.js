@@ -1,0 +1,1 @@
+var VideoList=React.createClass({displayName:"VideoList",render:function(){return React.createElement(VideoNav,{videos:this.props.videos})}});
