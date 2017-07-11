@@ -50,7 +50,15 @@ class Contact
       url: '/blogs/recent'}
   end
 
+  def video
+    { name: 'inspired videos',
+      classname: 'fa fa-youtube-play',
+      fcolor: 'white',
+      color: 'background-color-1',
+      url: '/profiles/videos'}
+  end
+
   def hash_value
-    {name: [facebook, linked_in, phone, email, resume, blog]}
+    {name: [facebook, linked_in, phone, email, resume, blog, video]}
   end
 end

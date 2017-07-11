@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   root to: 'profiles#index'
   get 'profiles/download', to: 'profiles#resume'
+  get 'profiles/videos', to: 'profiles#videos'
   get '/blogs/recent', to: 'blog_page#recent'
   get '/blogs/technology', to: 'blog_page#technology'
   get '/blogs/programming', to: 'blog_page#programming'

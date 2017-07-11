@@ -23,4 +23,8 @@ class ProfilesController < ApplicationController
 							x_sendfile: true,
 		 					:type => 'application/pdf')
 	end
+
+	def videos
+		@videos = Video.new.hash_value
+	end
 end
